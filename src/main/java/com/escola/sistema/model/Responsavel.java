@@ -11,28 +11,51 @@ public class Responsavel {
     // TODO lista temporária enquanto não tem BD
     private List<Aluno> alunos;
 
-    public Responsavel(String cpf, String nome, long idEscola, String email, String senha, List<Aluno> alunos) {
-        this.cpf = cpf;
-        this.nome = nome;
-        this.idEscola = idEscola;
-        this.email = email;
-        this.senha = senha;
-        this.alunos = alunos;
-    }
-
     public String getCpf() {
         return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
     }
 
     public String getNome() {
         return nome;
     }
 
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public long getIdEscola() {
+        return idEscola;
+    }
+
+    public void setIdEscola(long idEscola) {
+        this.idEscola = idEscola;
+    }
+
     public String getEmail() {
         return email;
     }
 
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
     public List<Aluno> getAlunos() {
         return alunos;
+    }
+
+    public void setAlunos(List<Aluno> alunos) {
+        this.alunos = alunos;
     }
 }

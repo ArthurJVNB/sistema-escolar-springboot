@@ -1,15 +1,12 @@
 package com.escola.sistema.model;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
-
-import static java.util.Arrays.asList;
 
 public class Escola {
     private long id;
     private String nome;
-    private static ArrayList<Escola> repositorio;
+    public static ArrayList<Escola> repositorio;
 
     static {
         // TODO temporário enquanto não tem BD
@@ -39,10 +36,6 @@ public class Escola {
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public static List<Escola> getRepositorio() {
-        return repositorio;
     }
 
     @Override
