@@ -6,6 +6,20 @@ import javax.persistence.Entity;
 public class Escola extends EntidadeAbstrata {
     private String nome;
 
+    public Escola() {
+    }
+
+    public Escola(String nome) {
+        super();
+        setNome(nome);
+    }
+
+    public Escola(Integer id, String nome) {
+        super();
+        setId(id);
+        setNome(nome);
+    }
+
     public String getNome() {
         return nome;
     }
