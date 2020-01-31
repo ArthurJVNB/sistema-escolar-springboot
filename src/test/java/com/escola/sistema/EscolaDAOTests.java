@@ -1,13 +1,10 @@
 package com.escola.sistema;
 
-import com.escola.sistema.endpoint.EscolaEndpoint;
 import com.escola.sistema.model.Escola;
-import com.escola.sistema.repository.EscolaRepositorio;
+import com.escola.sistema.dao.EscolaDAO;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
@@ -15,12 +12,11 @@ import java.util.List;
 import java.util.Optional;
 
 import static java.util.Arrays.asList;
-import static org.mockito.Mockito.when;
 
 @SpringBootTest
-public class EscolaRepositorioTests {
+public class EscolaDAOTests {
     @MockBean
-    private EscolaRepositorio repositorio;
+    private EscolaDAO repositorio;
 /*
     @BeforeEach
     void setRepositorioOutput() {

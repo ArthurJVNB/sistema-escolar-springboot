@@ -1,8 +1,8 @@
 package com.escola.sistema;
 
-import com.escola.sistema.endpoint.EscolaEndpoint;
+import com.escola.sistema.api.EscolaEndpoint;
 import com.escola.sistema.model.Escola;
-import com.escola.sistema.repository.EscolaRepositorio;
+import com.escola.sistema.dao.EscolaDAO;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -31,7 +31,7 @@ public class EscolaEndpointTests {
     private TestRestTemplate restTemplate;
 
     @Mock
-    private EscolaRepositorio repositorio;
+    private EscolaDAO repositorio;
 
     @BeforeEach
     void setRepositorioOutput() {

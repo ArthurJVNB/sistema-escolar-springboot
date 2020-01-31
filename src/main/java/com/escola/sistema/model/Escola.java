@@ -1,5 +1,7 @@
 package com.escola.sistema.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.persistence.Entity;
 
 @Entity
@@ -9,22 +11,18 @@ public class Escola extends EntidadeAbstrata {
     public Escola() {
     }
 
-    public Escola(String nome) {
+    public Escola(@JsonProperty("nome") String nome) {
         super();
-        setNome(nome);
+        this.nome = nome;
     }
 
     public Escola(Integer id, String nome) {
         super();
-        setId(id);
-        setNome(nome);
+        this.id = id;
+        this.nome = nome;
     }
 
     public String getNome() {
         return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
     }
 }
