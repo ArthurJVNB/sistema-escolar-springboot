@@ -3,9 +3,11 @@ package com.escola.sistema.model;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.Entity;
+import javax.validation.constraints.NotBlank;
 
 @Entity
 public class Escola extends EntidadeAbstrata {
+    @NotBlank
     private String nome;
 
     public Escola() {

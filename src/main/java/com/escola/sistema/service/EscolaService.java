@@ -31,8 +31,13 @@ public class EscolaService {
         return new ResponseEntity<>(escolaOptional.get(), HttpStatus.OK);
     }
 
-    public ResponseEntity<?> save(@RequestBody Escola escola) {
+    public ResponseEntity<?> save(Escola escola) {
         return new ResponseEntity<>(escolaDAO.save(escola), HttpStatus.OK);
+    }
+
+    public ResponseEntity<?> update(Escola escola) {
+        escolaDAO.save(escola);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
     public ResponseEntity<?> delete(Integer id) {

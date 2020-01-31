@@ -7,6 +7,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 import java.util.Optional;
 
 @RestController
@@ -25,23 +27,23 @@ public class EscolaEndpoint {
         return escolaService.listAll();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("{id}")
     public ResponseEntity<?> getEscolaById(@PathVariable(value = "id") Integer id) {
         return escolaService.getEscolaById(id);
     }
 
     @PostMapping
-    public ResponseEntity<?> save(@RequestBody Escola escola) {
+    public ResponseEntity<?> save(@Valid @NotNull @RequestBody Escola escola) {
         return escolaService.save(escola);
     }
 
-    @DeleteMapping(path = "/{id}")
+    @DeleteMapping(path = "{id}")
     public ResponseEntity<?> delete(@PathVariable Integer id) {
         return escolaService.delete(id);
     }
 
     @PutMapping
-    public ResponseEntity<?> update(@RequestBody Escola escola) {
-        return escolaService.save(escola);
+    public ResponseEntity<?> update(@Valid @NotNull @RequestBody Escola escola) {
+        return escolaService.update(escola);
     }
 }
