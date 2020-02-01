@@ -18,7 +18,7 @@ public class Escola extends EntidadeAbstrata {
         this.nome = nome;
     }
 
-    public Escola(Integer id, String nome) {
+    public Escola(String id, String nome) {
         super();
         this.id = id;
         this.nome = nome;

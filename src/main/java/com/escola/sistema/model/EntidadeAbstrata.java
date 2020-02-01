@@ -12,9 +12,9 @@ import java.util.Objects;
 public class EntidadeAbstrata implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    protected Integer id;
+    protected String id;
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
