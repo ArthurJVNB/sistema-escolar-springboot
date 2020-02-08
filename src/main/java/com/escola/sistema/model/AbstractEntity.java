@@ -9,12 +9,12 @@ import java.util.Objects;
 
 @MappedSuperclass
 // Não é mapeada no BD, apenas será estendida
-public class EntidadeAbstrata implements Serializable {
+public class AbstractEntity implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    protected String id;
+    protected long id;
 
-    public String getId() {
+    public long getId() {
         return id;
     }
 
@@ -22,7 +22,7 @@ public class EntidadeAbstrata implements Serializable {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        EntidadeAbstrata that = (EntidadeAbstrata) o;
+        AbstractEntity that = (AbstractEntity) o;
         return Objects.equals(id, that.id);
     }
 
